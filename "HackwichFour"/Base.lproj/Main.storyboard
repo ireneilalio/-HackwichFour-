@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHy-iL-KHS">
-                                <rect key="frame" x="174" y="412" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Classes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHy-iL-KHS">
+                                <rect key="frame" x="152" y="412" width="87" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -35,6 +35,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1I-fW-W4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1636.9230769230769" y="-150"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="568-UC-v0X">
+            <objects>
+                <viewController id="qim-IK-8Bw" customClass="ThirdViewController" customModule="_HackwichFour_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4cU-4Y-qk6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Favorite Foods" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh0-e3-2Jl">
+                                <rect key="frame" x="125" y="593" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coe-aw-vHb">
+                                <rect key="frame" x="158" y="443" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="ChangeColorButtonPressed:" destination="qim-IK-8Bw" eventType="touchUpInside" id="IS0-rw-qce"/>
+                                    <action selector="changeColorButtonPressed:" destination="0lc-VV-0IS" eventType="touchUpInside" id="lxE-1D-ccN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gyn-U8-m1y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OoP-XM-Wpe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGu-fV-5jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0lc-VV-0IS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="576"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="G8Z-C9-vAJ">
@@ -76,6 +112,7 @@
                     <connections>
                         <segue destination="TPp-63-w8u" kind="relationship" relationship="viewControllers" id="ewh-Lo-OQS"/>
                         <segue destination="JV7-Yb-JN0" kind="relationship" relationship="viewControllers" id="QhL-I1-uS6"/>
+                        <segue destination="dzB-AG-bDd" kind="relationship" relationship="viewControllers" id="OZu-7f-DOj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9L-9q-jM2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -120,8 +157,28 @@
             </objects>
             <point key="canvasLocation" x="735" y="-150"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="6Va-gi-YKo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dzB-AG-bDd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="bolt.heart.fill" catalog="system" id="xfZ-YN-ZPZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sp8-3I-B1i">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qim-IK-8Bw" kind="relationship" relationship="rootViewController" id="dtP-3b-cV8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Avd-if-hXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734" y="576"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bolt.heart.fill" catalog="system" width="128" height="107"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
